@@ -1,10 +1,12 @@
 package com.utils.ruialmeida.mylib;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.io.File;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -13,6 +15,8 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        File file = new File(Environment.getExternalStorageDirectory() + File.separator +"Download", "file.zip");
+        Utils.system.unzipFile(file, this);
     }
 
     @Override

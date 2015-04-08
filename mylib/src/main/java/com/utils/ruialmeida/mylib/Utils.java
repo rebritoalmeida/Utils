@@ -5,8 +5,10 @@ package com.utils.ruialmeida.mylib;
  */
 public abstract class Utils {
 
+    public static String HYBRID_DIRECTORY = "" ;
+
     /**
-     * Math Utils
+     * math Utils
      *
      * @author rui
      *
@@ -14,4 +16,9 @@ public abstract class Utils {
     public static class math extends com.utils.ruialmeida.mylib.math {
     }
 
+    /**
+     * system Utils
+     */
+    public static class system extends com.utils.ruialmeida.mylib.system{
+    }
 }
